@@ -33,7 +33,7 @@ class MovieAdapter(private val context: Context, private val movies: MutableList
         fun bind(movie: Movie){
             tvTitle.text = movie.title
             tvOverview.text = movie.overview
-            Glide.with(context).load(movie.posterImageUrl).into(tvPoster)
+            Glide.with(context).load(movie.posterImageUrl).placeholder(R.drawable.placeholder).into(tvPoster)
         }
     }
 }
